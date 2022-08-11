@@ -1,4 +1,8 @@
 function isJavaScriptFile(string) {
+    if (typeof string !== "string") {
+        return "Please enter a string!";
+    }
+
     if (string.indexOf(".js") > -1) {
         return true;
     }
@@ -6,8 +10,6 @@ function isJavaScriptFile(string) {
 
 }
 
-let arr = ["app.js", "file.png", "image.js", "doc.jpg"];
-for (i of arr) {
-    let isarray = isJavaScriptFile(i);
-    console.log(isarray);
-}
+let arr = 'kamrul.js';
+let isarray = isJavaScriptFile(arr);
+console.log(isarray);
